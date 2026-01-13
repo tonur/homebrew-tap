@@ -5,21 +5,21 @@
 class Heft < Formula
   desc "Tool to view container images needed by Helm, for use in SBOM or air-gapped environments"
   homepage "https://github.com/tonur/heft"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tonur/heft/releases/download/v0.0.3/heft-0.0.3-darwin-x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1ecc4b28b8b8c6a62249b3d2b53a33c2b49fe270277e4ff3a5cb4b1cec195f44"
+      url "https://github.com/tonur/heft/releases/download/v0.0.4/heft-0.0.4-darwin-x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d06f8fc3e409b0e7d516516c7a6ea6fed433dd8c0cc5adb5caa186eda6bb626d"
 
       def install
         bin.install "heft"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tonur/heft/releases/download/v0.0.3/heft-0.0.3-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "932c8d57b68a4e682016a3147289748fa4228cf045f3b8314fd9203f0ceb5727"
+      url "https://github.com/tonur/heft/releases/download/v0.0.4/heft-0.0.4-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "b82a88ff0cc2d8e26c6002985980ef281be6fafbaf30538efd45547df68a947c"
 
       def install
         bin.install "heft"
@@ -29,15 +29,15 @@ class Heft < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tonur/heft/releases/download/v0.0.3/heft-0.0.3-linux-x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b52546aacc1db1d935ac20166348722983e8b497c16e045930e02f6d37745b6a"
+      url "https://github.com/tonur/heft/releases/download/v0.0.4/heft-0.0.4-linux-x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "71ec3fae9b5afb27b8cb11a7db7a1e165bca9be11cd16e028d77f4425bbafc93"
       def install
         bin.install "heft"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tonur/heft/releases/download/v0.0.3/heft-0.0.3-linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b80e92bd03012347ba4cf0b01c0f7190e84372b2edbb4f7e851040c681fbec5e"
+      url "https://github.com/tonur/heft/releases/download/v0.0.4/heft-0.0.4-linux-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "16950ef062d8b68ed0f204ec769d1094ec07626bda4a5c85939fc4400948bcf9"
       def install
         bin.install "heft"
       end
